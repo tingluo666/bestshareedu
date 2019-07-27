@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.roncoo.education.user.service.dao.impl.mapper.LecturerIntentionMapper">
+  <resultMap id="BaseResultMap" type="com.roncoo.education.user.service.dao.impl.mapper.entity.LecturerIntention">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="status_id" jdbcType="TINYINT" property="statusId" />
+    <result column="user_no" jdbcType="BIGINT" property="userNo" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="id_number" jdbcType="VARCHAR" property="idNumber" />
+    <result column="positive_id_img_url" jdbcType="VARCHAR" property="positiveIdImgUrl" />
+    <result column="negative_id_img_url" jdbcType="VARCHAR" property="negativeIdImgUrl" />
+    <result column="wechat" jdbcType="VARCHAR" property="wechat" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="school" jdbcType="VARCHAR" property="school" />
+    <result column="degree_img_url" jdbcType="VARCHAR" property="degreeImgUrl" />
+    <result column="diploma_img_url" jdbcType="VARCHAR" property="diplomaImgUrl" />
+    <result column="student_img_url" jdbcType="VARCHAR" property="studentImgUrl" />
+    <result column="tqc_number" jdbcType="VARCHAR" property="tqcNumber" />
+    <result column="tqc_img_url" jdbcType="VARCHAR" property="tqcImgUrl" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="grade" jdbcType="VARCHAR" property="grade" />
+    <result column="subject" jdbcType="VARCHAR" property="subject" />
+    <result column="experience" jdbcType="VARCHAR" property="experience" />
+    <result column="award" jdbcType="VARCHAR" property="award" />
+    <result column="achievement" jdbcType="VARCHAR" property="achievement" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, gmt_create, gmt_modified, status_id, user_no, mobile, id_number, positive_id_img_url, 
+    negative_id_img_url, wechat, email, qq, education, school, degree_img_url, diploma_img_url,
+    student_img_url, tqc_number, tqc_img_url, province, city, address, grade, subject, 
+    experience, award, achievement, create_time, update_time
+  </sql>
+  <select id="selectByExample" parameterType="com.roncoo.education.user.service.dao.impl.mapper.entity.LecturerIntentionExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from lecturer_intention
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.roncoo.education.user.service.dao.impl.mapper.entity.LecturerIntentionExample">
+    delete from lecturer_intention
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.roncoo.education.user.service.dao.impl.mapper.entity.LecturerIntention">
+    insert into lecturer_intention (id, gmt_create, gmt_modified, 
+      status_id, user_no, mobile, 
+      id_number, positive_id_img_url, negative_id_img_url,
+      wechat, email, qq, 
+      education, school, degree_img_url, 
+      diploma_img_url, student_img_url, tqc_number, 
+      tqc_img_url, province, city, 
+      address, grade, subject, 
+      experience, award, achievement, 
+      create_time, update_time)
+    values (#{id,jdbcType=BIGINT}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, 
+      #{statusId,jdbcType=TINYINT}, #{userNo,jdbcType=BIGINT}, #{mobile,jdbcType=VARCHAR}, 
+      #{idNumber,jdbcType=VARCHAR}, #{positiveIdImgUrl,jdbcType=VARCHAR}, #{negativeIdImgUrl,jdbcType=VARCHAR},
+      #{wechat,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{qq,jdbcType=VARCHAR}, 
+      #{education,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR}, #{degreeImgUrl,jdbcType=VARCHAR}, 
+      #{diplomaImgUrl,jdbcType=VARCHAR}, #{studentImgUrl,jdbcType=VARCHAR}, #{tqcNumber,jdbcType=VARCHAR}, 
+      #{tqcImgUrl,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{grade,jdbcType=VARCHAR}, #{subject,jdbcType=VARCHAR}, 
+      #{experience,jdbcType=VARCHAR}, #{award,jdbcType=VARCHAR}, #{achievement,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.roncoo.education.user.service.dao.impl.mapper.entity.LecturerIntention">
+    insert into lecturer_intention
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified,
+      </if>
+      <if test="statusId != null">
+        status_id,
+      </if>
+      <if test="userNo != null">
+        user_no,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="idNumber != null">
+        id_number,
+      </if>
+      <if test="positiveIdImgUrl != null">
+        positive_id_img_url,
+      </if>
+      <if test="negativeIdImgUrl != null">
+        negative_id_img_url,
+      </if>
+      <if test="wechat != null">
+        wechat,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="qq != null">
+        qq,
+      </if>
+      <if test="education != null">
+        education,
+      </if>
+      <if test="school != null">
+        school,
+      </if>
+      <if test="degreeImgUrl != null">
+        degree_img_url,
+      </if>
+      <if test="diplomaImgUrl != null">
+        diploma_img_url,
+      </if>
+      <if test="studentImgUrl != null">
+        student_img_url,
+      </if>
+      <if test="tqcNumber != null">
+        tqc_number,
+      </if>
+      <if test="tqcImgUrl != null">
+        tqc_img_url,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="grade != null">
+        grade,
+      </if>
+      <if test="subject != null">
+        subject,
+      </if>
+      <if test="experience != null">
+        experience,
+      </if>
+      <if test="award != null">
+        award,
+      </if>
+      <if test="achievement != null">
+        achievement,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null">
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="statusId != null">
+        #{statusId,jdbcType=TINYINT},
+      </if>
+      <if test="userNo != null">
+        #{userNo,jdbcType=BIGINT},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="idNumber != null">
+        #{idNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="positiveIdImgUrl != null">
+        #{positiveIdImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="negativeIdImgUrl != null">
+        #{negativeIdImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="wechat != null">
+        #{wechat,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="qq != null">
+        #{qq,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="school != null">
+        #{school,jdbcType=VARCHAR},
+      </if>
+      <if test="degreeImgUrl != null">
+        #{degreeImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="diplomaImgUrl != null">
+        #{diplomaImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="studentImgUrl != null">
+        #{studentImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="tqcNumber != null">
+        #{tqcNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="tqcImgUrl != null">
+        #{tqcImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="grade != null">
+        #{grade,jdbcType=VARCHAR},
+      </if>
+      <if test="subject != null">
+        #{subject,jdbcType=VARCHAR},
+      </if>
+      <if test="experience != null">
+        #{experience,jdbcType=VARCHAR},
+      </if>
+      <if test="award != null">
+        #{award,jdbcType=VARCHAR},
+      </if>
+      <if test="achievement != null">
+        #{achievement,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.roncoo.education.user.service.dao.impl.mapper.entity.LecturerIntentionExample" resultType="java.lang.Long">
+    select count(*) from lecturer_intention
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update lecturer_intention
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.gmtCreate != null">
+        gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.gmtModified != null">
+        gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.statusId != null">
+        status_id = #{record.statusId,jdbcType=TINYINT},
+      </if>
+      <if test="record.userNo != null">
+        user_no = #{record.userNo,jdbcType=BIGINT},
+      </if>
+      <if test="record.mobile != null">
+        mobile = #{record.mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idNumber != null">
+        id_number = #{record.idNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.positiveIdImgUrl != null">
+        positive_id_img_url = #{record.positiveIdImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.negativeIdImgUrl != null">
+        negative_id_img_url = #{record.negativeIdImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.wechat != null">
+        wechat = #{record.wechat,jdbcType=VARCHAR},
+      </if>
+      <if test="record.email != null">
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.qq != null">
+        qq = #{record.qq,jdbcType=VARCHAR},
+      </if>
+      <if test="record.education != null">
+        education = #{record.education,jdbcType=VARCHAR},
+      </if>
+      <if test="record.school != null">
+        school = #{record.school,jdbcType=VARCHAR},
+      </if>
+      <if test="record.degreeImgUrl != null">
+        degree_img_url = #{record.degreeImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.diplomaImgUrl != null">
+        diploma_img_url = #{record.diplomaImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.studentImgUrl != null">
+        student_img_url = #{record.studentImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tqcNumber != null">
+        tqc_number = #{record.tqcNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tqcImgUrl != null">
+        tqc_img_url = #{record.tqcImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.province != null">
+        province = #{record.province,jdbcType=VARCHAR},
+      </if>
+      <if test="record.city != null">
+        city = #{record.city,jdbcType=VARCHAR},
+      </if>
+      <if test="record.address != null">
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.grade != null">
+        grade = #{record.grade,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subject != null">
+        subject = #{record.subject,jdbcType=VARCHAR},
+      </if>
+      <if test="record.experience != null">
+        experience = #{record.experience,jdbcType=VARCHAR},
+      </if>
+      <if test="record.award != null">
+        award = #{record.award,jdbcType=VARCHAR},
+      </if>
+      <if test="record.achievement != null">
+        achievement = #{record.achievement,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update lecturer_intention
+    set id = #{record.id,jdbcType=BIGINT},
+      gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      status_id = #{record.statusId,jdbcType=TINYINT},
+      user_no = #{record.userNo,jdbcType=BIGINT},
+      mobile = #{record.mobile,jdbcType=VARCHAR},
+      id_number = #{record.idNumber,jdbcType=VARCHAR},
+      positive_id_img_url = #{record.positiveIdImgUrl,jdbcType=VARCHAR},
+      negative_id_img_url = #{record.negativeIdImgUrl,jdbcType=VARCHAR},
+      wechat = #{record.wechat,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      qq = #{record.qq,jdbcType=VARCHAR},
+      education = #{record.education,jdbcType=VARCHAR},
+      school = #{record.school,jdbcType=VARCHAR},
+      degree_img_url = #{record.degreeImgUrl,jdbcType=VARCHAR},
+      diploma_img_url = #{record.diplomaImgUrl,jdbcType=VARCHAR},
+      student_img_url = #{record.studentImgUrl,jdbcType=VARCHAR},
+      tqc_number = #{record.tqcNumber,jdbcType=VARCHAR},
+      tqc_img_url = #{record.tqcImgUrl,jdbcType=VARCHAR},
+      province = #{record.province,jdbcType=VARCHAR},
+      city = #{record.city,jdbcType=VARCHAR},
+      address = #{record.address,jdbcType=VARCHAR},
+      grade = #{record.grade,jdbcType=VARCHAR},
+      subject = #{record.subject,jdbcType=VARCHAR},
+      experience = #{record.experience,jdbcType=VARCHAR},
+      award = #{record.award,jdbcType=VARCHAR},
+      achievement = #{record.achievement,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>
