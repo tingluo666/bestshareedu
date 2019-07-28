@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="roncoo-education-util" />
+        <module name="roncoo-education-server-admin" />
+        <module name="roncoo-education-user-service" />
+        <module name="roncoo-education-course-feign" />
+        <module name="roncoo-education-server-eureka" />
+        <module name="roncoo-education-server-config" />
+        <module name="roncoo-education-server-zipkin" />
+        <module name="roncoo-education-course-common" />
+        <module name="roncoo-education-web-boss" />
+        <module name="roncoo-education-system-service" />
+        <module name="roncoo-education-course-service" />
+        <module name="roncoo-education-gateway" />
+        <module name="roncoo-education-system-feign" />
+        <module name="roncoo-education-user-common" />
+        <module name="roncoo-education-system-common" />
+        <module name="roncoo-education-job" />
+        <module name="roncoo-education-user-feign" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="roncoo-education" target="1.8" />
+      <module name="roncoo-education-course" target="1.8" />
+      <module name="roncoo-education-course-common" target="1.8" />
+      <module name="roncoo-education-course-feign" target="1.8" />
+      <module name="roncoo-education-course-service" target="1.8" />
+      <module name="roncoo-education-gateway" target="1.8" />
+      <module name="roncoo-education-job" target="1.8" />
+      <module name="roncoo-education-server-admin" target="1.8" />
+      <module name="roncoo-education-server-config" target="1.8" />
+      <module name="roncoo-education-server-eureka" target="1.8" />
+      <module name="roncoo-education-server-zipkin" target="1.8" />
+      <module name="roncoo-education-system" target="1.8" />
+      <module name="roncoo-education-system-common" target="1.8" />
+      <module name="roncoo-education-system-feign" target="1.8" />
+      <module name="roncoo-education-system-service" target="1.8" />
+      <module name="roncoo-education-user" target="1.8" />
+      <module name="roncoo-education-user-common" target="1.8" />
+      <module name="roncoo-education-user-feign" target="1.8" />
+      <module name="roncoo-education-user-service" target="1.8" />
+      <module name="roncoo-education-util" target="1.8" />
+      <module name="roncoo-education-web-boss" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="roncoo-education-course-common" options="-parameters" />
+      <module name="roncoo-education-course-feign" options="-parameters" />
+      <module name="roncoo-education-course-service" options="-parameters" />
+      <module name="roncoo-education-gateway" options="-parameters" />
+      <module name="roncoo-education-job" options="-parameters" />
+      <module name="roncoo-education-server-admin" options="-parameters" />
+      <module name="roncoo-education-server-config" options="-parameters" />
+      <module name="roncoo-education-server-eureka" options="-parameters" />
+      <module name="roncoo-education-server-zipkin" options="-parameters" />
+      <module name="roncoo-education-system-common" options="-parameters" />
+      <module name="roncoo-education-system-feign" options="-parameters" />
+      <module name="roncoo-education-system-service" options="-parameters" />
+      <module name="roncoo-education-user-common" options="-parameters" />
+      <module name="roncoo-education-user-feign" options="-parameters" />
+      <module name="roncoo-education-user-service" options="-parameters" />
+      <module name="roncoo-education-util" options="-parameters" />
+      <module name="roncoo-education-web-boss" options="-parameters" />
+    </option>
+  </component>
+</project>

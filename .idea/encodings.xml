@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-course" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-course/roncoo-education-course-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-course/roncoo-education-course-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-course/roncoo-education-course-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-job" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-server-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-server-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-server-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-server-zipkin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-system" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-system/roncoo-education-system-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-system/roncoo-education-system-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-system/roncoo-education-system-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-user/roncoo-education-user-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-user/roncoo-education-user-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-user/roncoo-education-user-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roncoo-education-web-boss" charset="UTF-8" />
+  </component>
+</project>

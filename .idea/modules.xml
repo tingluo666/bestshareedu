@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education.iml" filepath="$PROJECT_DIR$/roncoo-education.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-course/roncoo-education-course.iml" filepath="$PROJECT_DIR$/roncoo-education-course/roncoo-education-course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-course/roncoo-education-course-common/roncoo-education-course-common.iml" filepath="$PROJECT_DIR$/roncoo-education-course/roncoo-education-course-common/roncoo-education-course-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-course/roncoo-education-course-feign/roncoo-education-course-feign.iml" filepath="$PROJECT_DIR$/roncoo-education-course/roncoo-education-course-feign/roncoo-education-course-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-course/roncoo-education-course-service/roncoo-education-course-service.iml" filepath="$PROJECT_DIR$/roncoo-education-course/roncoo-education-course-service/roncoo-education-course-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-gateway/roncoo-education-gateway.iml" filepath="$PROJECT_DIR$/roncoo-education-gateway/roncoo-education-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-job/roncoo-education-job.iml" filepath="$PROJECT_DIR$/roncoo-education-job/roncoo-education-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-server-admin/roncoo-education-server-admin.iml" filepath="$PROJECT_DIR$/roncoo-education-server-admin/roncoo-education-server-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-server-config/roncoo-education-server-config.iml" filepath="$PROJECT_DIR$/roncoo-education-server-config/roncoo-education-server-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-server-eureka/roncoo-education-server-eureka.iml" filepath="$PROJECT_DIR$/roncoo-education-server-eureka/roncoo-education-server-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-server-zipkin/roncoo-education-server-zipkin.iml" filepath="$PROJECT_DIR$/roncoo-education-server-zipkin/roncoo-education-server-zipkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-system/roncoo-education-system.iml" filepath="$PROJECT_DIR$/roncoo-education-system/roncoo-education-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-system/roncoo-education-system-common/roncoo-education-system-common.iml" filepath="$PROJECT_DIR$/roncoo-education-system/roncoo-education-system-common/roncoo-education-system-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-system/roncoo-education-system-feign/roncoo-education-system-feign.iml" filepath="$PROJECT_DIR$/roncoo-education-system/roncoo-education-system-feign/roncoo-education-system-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-system/roncoo-education-system-service/roncoo-education-system-service.iml" filepath="$PROJECT_DIR$/roncoo-education-system/roncoo-education-system-service/roncoo-education-system-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-user/roncoo-education-user.iml" filepath="$PROJECT_DIR$/roncoo-education-user/roncoo-education-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-user/roncoo-education-user-common/roncoo-education-user-common.iml" filepath="$PROJECT_DIR$/roncoo-education-user/roncoo-education-user-common/roncoo-education-user-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-user/roncoo-education-user-feign/roncoo-education-user-feign.iml" filepath="$PROJECT_DIR$/roncoo-education-user/roncoo-education-user-feign/roncoo-education-user-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-user/roncoo-education-user-service/roncoo-education-user-service.iml" filepath="$PROJECT_DIR$/roncoo-education-user/roncoo-education-user-service/roncoo-education-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-util/roncoo-education-util.iml" filepath="$PROJECT_DIR$/roncoo-education-util/roncoo-education-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-education-web-boss/roncoo-education-web-boss.iml" filepath="$PROJECT_DIR$/roncoo-education-web-boss/roncoo-education-web-boss.iml" />
+    </modules>
+  </component>
+</project>
